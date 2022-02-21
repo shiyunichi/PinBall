@@ -94,23 +94,23 @@ public class BrightnessRegulator : MonoBehaviour
         if (tag == "SmallStarTag")
         {
             this.score += 5;
-            
+            Debug.Log("5点に当たった");
         }
         else if (tag == "LargeSterTag")
         {
             this.score += 10;
-            
+            Debug.Log("10点に当たった");
 
         }
         else if (tag == "SmallCloudTag" || tag == "LargeCloudTag")
         {
             this.score += 20;
-            
+            Debug.Log("20点に当たった");
 
         }
 
         score += score;
-        Debug.Log("scoreの値" + score);
+        Debug.Log("scoreの値=" + score);
         this.scoreText.GetComponent<Text>().text = "Score:" + score;
 
     }
