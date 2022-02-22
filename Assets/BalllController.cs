@@ -10,7 +10,7 @@ public class BalllController : MonoBehaviour
     private float visiblePosZ = -6.5f;
 
     //得点を入れる変数を初期化する
-    private int score ;
+    private int score = 0;
 
     //ゲームオーバーを表示するテキスト
     private GameObject gameoverText;
@@ -22,7 +22,6 @@ public class BalllController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.score = 0;
 
         //シーンの中のGameOverTextオブジェクトを取得
         this.gameoverText = GameObject.Find("GameOverText");
@@ -46,7 +45,7 @@ public class BalllController : MonoBehaviour
         }
     }
 
-    //衝突時に呼ばれる函数
+    //衝突時に呼ばれる関数
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "SmallStarTag")
