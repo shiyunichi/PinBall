@@ -28,7 +28,7 @@ public class BrightnessRegulator : MonoBehaviour
     void Start()
     {
         this.scoreText = GameObject.Find("ScoreText");
-
+        this.score = 0;
         
         //タグによって光らせる色を変える
         if (tag == "SmallStarTag")
@@ -36,7 +36,7 @@ public class BrightnessRegulator : MonoBehaviour
             this.defaultColor = Color.white;
 
         }
-        else if(tag == "LargeSterTag")
+        else if(tag == "LargeStarTag")
         {
             this.defaultColor = Color.yellow;
 
@@ -63,10 +63,6 @@ public class BrightnessRegulator : MonoBehaviour
     void Update()
     {
         
-        //smScore[0] = smScore[1] + smScore[2] + smScore[3];
-        
-
-
         if (this.degree >= 0)
         {
             //光らせる強度を計算する
@@ -77,11 +73,8 @@ public class BrightnessRegulator : MonoBehaviour
 
             //現在の角度を小さくする
             this.degree -= this.speed;
-
             
         }
-
-        
 
     }
 
@@ -90,30 +83,34 @@ public class BrightnessRegulator : MonoBehaviour
     {
         //角度を180に設定
         this.degree = 180;
-         
+
+        AddScore();
+
+    }
+
+
+    void AddScore()
+    {
         if (tag == "SmallStarTag")
         {
             this.score += 5;
-            Debug.Log("5点に当たった");
+            
         }
-        else if (tag == "LargeSterTag")
+        else if (tag == "LargeStarTag")
         {
             this.score += 10;
-            Debug.Log("10点に当たった");
-
+            
         }
         else if (tag == "SmallCloudTag" || tag == "LargeCloudTag")
         {
             this.score += 20;
-            Debug.Log("20点に当たった");
+            
 
         }
 
         score += score;
-        Debug.Log("scoreの値=" + score);
+        
         this.scoreText.GetComponent<Text>().text = "Score:" + score;
-
     }
-
 
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8639986028094911753}
   - component: {fileID: 6928489121787537803}
   - component: {fileID: 6928489121787537800}
-  - component: {fileID: 3129933311809554182}
+  - component: {fileID: -1697814696586192333}
   m_Layer: 0
   m_Name: LargeStarPrefab
   m_TagString: LargeStarTag
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23bc751df2c684ff298f5366c146b75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3129933311809554182
+--- !u!114 &-1697814696586192333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
